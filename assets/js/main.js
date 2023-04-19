@@ -53,8 +53,17 @@ createApp({
 
     cambiaImg(x){
       this.attiva = x 
+    },
+
+    autoSlide(){
+      this.autoSlide = setInterval( ()=>{
+        this.next()
+      }, 1000)
     }
     
 
+  },
+  created(){
+    this.autoSlide()
   }
 }).mount('#app')
