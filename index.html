@@ -25,7 +25,8 @@
           <div  class="thumb">
             <img v-for="(element,index) in movies.image"
             v-bind:class="(attiva == index) ? 'active' : '' " 
-            v-bind:src="element" v-bind:alt="`image n. ${index}`">
+            v-bind:src="element" v-bind:alt="`image n. ${index}`"
+            @click="cambiaImg(index)">
           </div>
           <div class="prev" @click="prev">
             <i class="fa-solid fa-circle-arrow-up" style="color: #fff;"></i>

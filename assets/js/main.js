@@ -49,7 +49,12 @@ createApp({
       if ( this.attiva > this.movies.image.length - 1 ) {
         this.attiva = 0
       }
+    },
+
+    cambiaImg(x){
+      this.attiva = x 
     }
+    
 
   }
 }).mount('#app')
