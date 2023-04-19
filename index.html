@@ -13,8 +13,8 @@
     <div class="container">
       <div class="carosello">
         <div class="items">
-          <div class="item active">         
-            <img v-bind:src="movies.image[0]" alt="">
+          <div class="item">         
+            <img v-bind:src="movies.image[attiva]" alt="">
           </div>
         </div>
         <div class="thumbs">
@@ -23,10 +23,10 @@
             v-bind:class="(attiva == index) ? 'active' : '' " 
             v-bind:src="element" v-bind:alt="`image n. ${index}`">
           </div>
-          <div class="prev">
+          <div class="prev" @click="prev">
             <i class="fa-solid fa-circle-arrow-up" style="color: #fff;"></i>
           </div>
-          <div class="next">
+          <div class="next" @click="next">
             <i class="fa-solid fa-circle-arrow-down" style="color: #fff;"></i>
           </div>
         </div>

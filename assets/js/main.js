@@ -33,5 +33,23 @@ createApp({
   },
   methods: {
 
+    prev(){
+
+      this.attiva--
+
+      if ( this.attiva < 0 ) {
+        this.attiva = this.movies.image.length - 1
+      }
+    },
+
+    next(){
+
+      this.attiva++
+
+      if ( this.attiva > this.movies.image.length - 1 ) {
+        this.attiva = 0
+      }
+    }
+
   }
 }).mount('#app')

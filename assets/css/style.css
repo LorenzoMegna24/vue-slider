@@ -46,14 +46,11 @@
   filter: brightness(1);
 }
 
-.item.active{
-  display: block;
-}
-
 .item{
-  display: none;
   position: relative;
 }
+
+
 .item .info{
   position: absolute;
   bottom: 10px;
