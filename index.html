@@ -11,7 +11,7 @@
 <body>
   <div id="app">
     <div class="container">
-      <div class="carosello">
+      <div class="carosello" @mouseover="stopSlide" @mouseleave="autoSlide">
         <div class="items">
           <div class="item">         
             <img v-bind:src="movies.image[attiva]" alt="">

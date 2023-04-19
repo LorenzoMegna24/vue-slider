@@ -3,6 +3,9 @@ const { createApp } = Vue
 createApp({
   data() {
     return {
+
+      slider: null,
+
       attiva: 0,
 
       movies:{
@@ -56,11 +59,15 @@ createApp({
     },
 
     autoSlide(){
-      this.autoSlide = setInterval( ()=>{
+      this.slider = setInterval( ()=>{
         this.next()
       }, 1000)
+    },
+
+    stopSlide(){
+      clearInterval(this.slider)
+      this.slider = null
     }
-    
 
   },
   created(){
